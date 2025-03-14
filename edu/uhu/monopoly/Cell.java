@@ -1,9 +1,10 @@
 package edu.uhu.monopoly;
 
 public abstract class Cell {
-	private boolean available = true;
 	private String name;
 	protected Player proprietary;
+	private boolean available = true;
+	
 
 	public String getName() {
 		return name;
@@ -23,10 +24,6 @@ public abstract class Cell {
 	
 	public abstract void playAction();
 
-	public void setAvailable(boolean available) {
-		this.available = available;
-	}
-	
 	void setName(String name) {
 		this.name = name;
 	}
@@ -38,4 +35,8 @@ public abstract class Cell {
     public String toString() {
         return name;
     }
+
+	public void setAvailable(boolean available) {
+		this.available = available;
+	}
 }
